@@ -1,0 +1,81 @@
+/* Stili per il contenitore di output <pre> */
+#output {
+    width: 90%; /* Imposta la larghezza del contenitore al 100% della larghezza del genitore */
+    height: 500px; /* Imposta un'altezza fissa per il contenitore */
+    border: 1px solid #ccc; /* Aggiungi un bordo per una migliore visualizzazione */
+    padding: 10px; /* Aggiungi padding per dare un po' di spazio interno */
+    overflow: auto; /* Aggiungi lo scroll se il contenuto supera l'altezza */
+    background-color: #f8f8f8; /* Colore di sfondo per migliorare la leggibilità */
+    font-family: monospace; /* Utilizza un font monospace per un look da terminale/codice */
+}
+
+.endpoint-config {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Stili per il pulsante di copia */
+#copyBtn {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#copyBtn:hover {
+    background-color: #45a049; /* Verde scuro */
+}
+
+/*
+.endpoint-config {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;  Opzionale: bordo per visualizzare i confini 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.left-column, .right-column {
+    width: 48%;  Entrambe le colonne occupano circa metà della larghezza 
+}
+
+.left-column {
+    margin-right: 2%;  Spazio tra le colonne 
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+*/
+/* Stile per le textarea */
+textarea {
+    width: calc(50% - 20px); /* Larghezza leggermente meno della larghezza totale del div */
+    height: 150px; /* Altezza desiderata */
+    resize: vertical; /* Permette di ridimensionare verticalmente */
+}
+
+/* Stile per i div di drag-and-drop */
+.drag-and-drop-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: calc(30% - 20px); /* Larghezza leggermente meno della larghezza totale del div */
+}
+
+.drop-zone {
+    width: 100%;
+    height: 100px; /* Altezza desiderata per il div di drag-and-drop */
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}

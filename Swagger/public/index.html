@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Swagger Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <h1>API Swagger Generator</h1>
+    <form id="urlForm">
+        <label for="server">Insert server:</label> <br>
+        <input type="text" id="serverPath"> <br><br>
+        <label for="urls">Enter API URLs (method + endpoint):</label><br>
+        <textarea id="urls" name="urls" rows="5" cols="50" placeholder="Insert one per line"></textarea><br><br>
+        <button type="button" id="addEndpoints">Add Endpoints</button>
+        <div id="endpointsContainer"></div> <br>
+        <input type="submit" value="Generate Swagger">
+    </form>
+
+    <div id="outputContainer" style="display: none; position: relative;">
+        <button id="copyBtn" style="position: absolute; top: 10px; right: 10px;">Copy</button>
+        <pre id="output"></pre>
+    </div>
+
+
+    <script src="index.js"></script>
+    <!--<script src="index_2_prova.js"></script>-->
+</body>
+    </html>
