@@ -202,18 +202,6 @@ function generateSwagger(urlArray, endpointsConfig, serverUrl) {
             alert(`Errore durante il parsing o la conversione del response schema per ${responseSchemaName}. Verifica che il JSON sia corretto.`);
         }
 
-        /* Questa riga di codice è responsabile della configurazione delle informazioni di sicurezza per l'endpoint. 
-        securitySchemes.length: Controlla se l'array securitySchemes contiene elementi. Se contiene uno o più schemi 
-        di sicurezza, il valore sarà true; altrimenti sarà false.
-        securitySchemes.map(scheme => ({ [scheme]: [] })): Se securitySchemes.length è true, questo map trasforma ogni 
-        schema di sicurezza in un oggetto. La funzione di mappatura crea un nuovo array di oggetti, dove ciascun oggetto 
-        ha una chiave che è il nome dello schema di sicurezza (scheme) e un valore che è un array vuoto ([]).
-        Per esempio, se securitySchemes fosse ['BasicAuth', 'BearerAuth'], il risultato del map sarebbe [{ BasicAuth: [] }, 
-        { BearerAuth: [] }].
-        undefined: Se securitySchemes.length è false (cioè, l'array securitySchemes è vuoto), allora security sarà impostato 
-        su undefined.
-        Quindi, in pratica, questa riga di codice assegna a security un array di schemi di sicurezza se ci sono schemi 
-        definiti, altrimenti assegna undefined. */
         const security = securitySchemes.length ? securitySchemes.map(scheme => ({ [scheme]: [] })) : undefined;
 
         const tags = path.split('/')[1];
